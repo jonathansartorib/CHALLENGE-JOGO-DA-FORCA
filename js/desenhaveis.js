@@ -64,77 +64,84 @@ function desenharForca() {
 	tabuleiro.moveTo(600, 80);
 	tabuleiro.lineTo(600, 125);
 	tabuleiro.stroke();
+	tabuleiro.closePath();
 }
 
 function desenharCabeca() {
 	tabuleiro.lineWidth = 6;
 	tabuleiro.lineCap = "round";
 	tabuleiro.lineJoin = "round";
-	tabuleiro.fillStyle = "#000";
+	tabuleiro.strokeStyle = "#000";
 
 	tabuleiro.beginPath();
 	tabuleiro.arc(600, 160, 30, 0, Math.PI * 2);
 	tabuleiro.fill();
+	tabuleiro.closePath();
 }
 
 function desenharCorpo() {
 	tabuleiro.lineWidth = 6;
 	tabuleiro.lineCap = "round";
 	tabuleiro.lineJoin = "round";
-	tabuleiro.fillStyle = "#000";
+	tabuleiro.strokeStyle = "#000";
 
 	tabuleiro.beginPath();
 	tabuleiro.moveTo(600, 175);
 	tabuleiro.lineTo(600, 330);
 	tabuleiro.stroke();
+	tabuleiro.closePath();
 }
 
 function desenharBracoEsquerdo() {
 	tabuleiro.lineWidth = 6;
 	tabuleiro.lineCap = "round";
 	tabuleiro.lineJoin = "round";
-	tabuleiro.fillStyle = "#000";
+	tabuleiro.strokeStyle = "#000";
 
 	tabuleiro.beginPath();
 	tabuleiro.moveTo(600, 205);
 	tabuleiro.lineTo(550, 270);
 	tabuleiro.stroke();
+	tabuleiro.closePath();
 }
 
 function desenharBracoDireito() {
 	tabuleiro.lineWidth = 6;
 	tabuleiro.lineCap = "round";
 	tabuleiro.lineJoin = "round";
-	tabuleiro.fillStyle = "#000";
+	tabuleiro.strokeStyle = "#000";
 
 	tabuleiro.beginPath();
 	tabuleiro.moveTo(600, 205);
 	tabuleiro.lineTo(650, 270);
 	tabuleiro.stroke();
+	tabuleiro.closePath();
 }
 
 function desenharPernaEsquerda() {
 	tabuleiro.lineWidth = 6;
 	tabuleiro.lineCap = "round";
 	tabuleiro.lineJoin = "round";
-	tabuleiro.fillStyle = "#000";
+	tabuleiro.strokeStyle = "#000";
 
 	tabuleiro.beginPath();
 	tabuleiro.moveTo(600, 330);
 	tabuleiro.lineTo(550, 410);
 	tabuleiro.stroke();
+	tabuleiro.closePath();
 }
 
 function desenharPernaDireita() {
 	tabuleiro.lineWidth = 6;
 	tabuleiro.lineCap = "round";
 	tabuleiro.lineJoin = "round";
-	tabuleiro.fillStyle = "#000";
+	tabuleiro.strokeStyle = "#000";
 
 	tabuleiro.beginPath();
 	tabuleiro.moveTo(600, 330);
 	tabuleiro.lineTo(650, 410);
 	tabuleiro.stroke();
+	tabuleiro.closePath();
 }
 
 function voceGanhou() {
@@ -153,7 +160,7 @@ function voceGanhou() {
 
 		tabuleiro.font = 'bold 30px Arial';
 		tabuleiro.fillText("Palavra secreta é: " + palavraSecreta, 370, 520);
-		numeroVitorias();
+		tabuleiro.closePath();
 	}
 	setTimeout(ganhou, 1000);
 }
@@ -174,15 +181,10 @@ function vocePerdeu() {
 
 		tabuleiro.font = 'bold 30px Arial';
 		tabuleiro.fillText("Palavra secreta é: " + palavraSecreta, 370, 520);
-		numeroVitorias();
+		tabuleiro.closePath();
 	}
 	setTimeout(perdeu, 1000);
 }
 
-function numeroVitorias() {
-	tabuleiro.fillStyle = 'black';
-	tabuleiro.font = 'bold 20px Arial';
-	tabuleiro.fillText('Vitorias: ' + vitorias, 370, 350);
-	tabuleiro.fillText('Derrotas: ' + derrotas, 550, 350);
-}
+
 

@@ -7,8 +7,6 @@ var letrasCertas = [];
 var palavraCorreta = "";
 var palavraCompleta = [];
 var erros = 0;
-var vitorias = 0;
-var derrotas = 0;
 
 
 adicionarPalavra();
