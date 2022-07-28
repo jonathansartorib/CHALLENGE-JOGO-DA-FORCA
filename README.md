@@ -1,6 +1,8 @@
 # CHALLENGE-JOGO-DA-FORCA
 Repositório para auxílio no Challenge Oracle ONE, na plataforma ALURA
 
+<strong>Teste o projeto aqui =></strong><a>https://jonathansartorib.github.io/CHALLENGE-JOGO-DA-FORCA/</a>
+
 Requisitos:
 - Deve funcionar só com letras maiúsculas;
 - Não devem ser utilizadas letras com acentos nem caracteres especiais;
